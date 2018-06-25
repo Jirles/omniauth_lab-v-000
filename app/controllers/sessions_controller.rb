@@ -1,7 +1,9 @@
+require 'byebug'
 class SessionsController < ApplicationController
 
   def create
-    user = User.find_by!(email: auth_hash["info"]["email"])
+    user = User.find_by(email: auth_hash["info"]["email"])
+    byebug
     if user.nil?
       user = User.new do |u|
         u.name = auth_hash["info"]["name"]
