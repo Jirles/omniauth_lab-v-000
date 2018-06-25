@@ -8,5 +8,5 @@ class User < ActiveRecord::Base
         u.uid = auth_hash["uid"]
       end
     end
-  end 
+  end
 end
