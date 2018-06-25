@@ -8,10 +8,13 @@ class SessionsController < ApplicationController
         u.email = auth_hash["info"]["email"]
         u.uid = auth_hash["uid"]
       end
+      if user.valid?
+        user.save
+      else
+        redirect_to root_path
+      end
     end
-
     session[:user_uid] = user.uid
-
   end
 
   private
