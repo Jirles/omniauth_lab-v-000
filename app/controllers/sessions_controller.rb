@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: auth_hash["info"]["email"])
     if user.nil?
-      user = User.create do |u|
+      user = User.new do |u|
         u.name = auth_hash["info"]["name"]
         u.email = auth_hash["info"]["email"]
         u.uid = auth_hash["uid"]
