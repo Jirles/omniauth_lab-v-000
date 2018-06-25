@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
       end
     end
     session[:user_uid] = user.uid
+    @auth = auth_hash
   end
 
   private
