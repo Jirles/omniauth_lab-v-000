@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
         redirect_to root_path
       end
     end
-    session[:user_uid] = user.uid
+    session[:user_id] = user.id
     @auth = auth_hash
   end
 
