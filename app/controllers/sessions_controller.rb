@@ -9,8 +9,8 @@ class SessionsController < ApplicationController
         u.uid = auth_hash["uid"]
       end
     end
-    
-      session[:user_uid] = user.uid
+
+    session[:user_uid] = user.uid
 
   end
 
