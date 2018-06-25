@@ -9,10 +9,9 @@ class SessionsController < ApplicationController
         u.uid = auth_hash["uid"]
       end
     end
+    
       session[:user_uid] = user.uid
-    else
-      redirect_to root_path
-    end
+
   end
 
   private
